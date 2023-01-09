@@ -8,12 +8,12 @@ function addItem()
         checked : false
     };
 
-    
-      
+          
     if(curritem.toString().length == 0){
         alert("Field can not be Empty");
         return;
-    } 
+    }
+
     item.title = curritem;
     items.push(item);
     document.querySelector("#count span").innerHTML = items.length;
@@ -26,12 +26,15 @@ function addItem()
     '<h3> '+ item.title +' </h3> </div>' +
     ' <button type="submit" class="fa-solid fa-trash" onclick = "deleteItem('+ item.id +')" >Delete</button>  ' +                               
     '</div>';
+
+    //adding todo item in last of the list inside todo-list container
     document.getElementById("todo-list").insertAdjacentHTML('beforeEnd',todo);
 }
 
-function fillList(){
+
+function fillList()
+{
     let todo = "";
-    debugger;
     items.forEach((item) => {
       todo += '<div class= "'+ ((item.checked)? "todo_item checked" :"todo_item"  ) + '" id='+ item.id +'  >' +
       '<div class="left-list-item"> <input type="checkbox"   onclick="completed('+ item.id +')"  '+ ((item.checked)? 'checked':'' ) + ' >' +
@@ -42,17 +45,19 @@ function fillList(){
     document.getElementById("todo-list").innerHTML = todo;
 }
 
+
 function completed(id)
 {
     items.forEach((val)=>{
          if(val.id == id)
          {
             val.checked = !val.checked ;
+
+            //toogle class for highlighting the checked item
             document.getElementById(val.id).classList.toggle("checked");
             return;
          }
     });
-
 }
 
 
@@ -60,6 +65,8 @@ function deleteItem(id)
 {
     let temItems = items.filter((val) => val.id != id);
     items = temItems;
+
+    //refile todo  list after removing element
     fillList();    
 }
 

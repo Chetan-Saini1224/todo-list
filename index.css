@@ -39,6 +39,8 @@ body{
     padding: 2%;
 }
 
+
+
 #todo-input input[type="text"]
 {
     width: 70%;
@@ -109,11 +111,14 @@ body{
     color: rgb(159, 251, 205);
 }
 
+
 .checked
 {
     background-color: #fc92c4;
 }
 
+
+/* delete button style */
 .fa-trash
 {
     font-size: 12px;
