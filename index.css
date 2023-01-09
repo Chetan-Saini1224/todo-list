@@ -1,0 +1,130 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+#count
+{
+    color: rgb(159, 251, 205);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./todod_pixels1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+#todo
+{
+    display: flex;
+    flex-direction: column;
+    height:80vh;
+    width:70vh;
+    padding: 1%;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(rgb(0, 9, 134),rgb(87, 208, 253)); 
+    box-shadow: 0.05rem 0.1rem 0.9rem 0.03rem rgba(0, 0, 0, 0.45);
+}
+
+#todo-input
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+#todo-input input[type="text"]
+{
+    width: 70%;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 1%;
+    border: 2px solid #fc92c4;
+    background-color:#fc92c4;
+    outline: none;
+    color: rgb(159, 251, 205);
+
+}
+#todo-input input[type="button"]
+{
+    width: 20%;
+    border-radius: 2%; 
+    border-radius: 5px; 
+    padding: 1%;
+    font-size: 17px;
+    outline: none;
+    border: 2px solid #fc92c4;
+    background-color: #fc92c4;
+    color: rgb(159, 251, 205)
+}
+
+
+.todo_item
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    width: 90%;
+    transition: padding 0.3s;
+}
+
+.todo_item:hover
+{
+    box-shadow: 0.05rem 0.1rem 0.9rem 0.03rem rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    padding: 8px;   
+}
+
+#todo-list
+{
+    padding-top: 5%;
+    overflow:auto;
+}
+
+.todo_item input[type = "checkbox"]
+{
+    width:20px;
+    height:20px;
+    margin-right: 10%;
+    accent-color:rgb(159, 251, 205);
+}
+
+
+.left-list-item
+{
+    width:75%;
+}
+
+
+.left-list-item h3
+{
+    display: inline-block;
+    position:sticky;
+    color: rgb(159, 251, 205);
+}
+
+.checked
+{
+    background-color: #fc92c4;
+}
+
+.fa-trash
+{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    color: #fc92c4;
+    border: 2px solid #fc92c4;
+    border-radius: 5px;
+}
+
+.fa-trash:hover
+{
+ color: #fc92c4;
+}
