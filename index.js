@@ -16,7 +16,15 @@ function addItem()
 
     item.title = curritem;
     items.push(item);
+
+    //updating item counter
     document.querySelector("#count span").innerHTML = items.length;
+    
+    //updating remaining item counter
+    leftTasks();
+ 
+
+
     if(curritem.toString().length >= 30){
         alert("value cannot exced 30 Character (include space)");
         return;
@@ -43,6 +51,12 @@ function fillList()
       '</div>';
     });
     document.getElementById("todo-list").innerHTML = todo;
+
+    //updating total item counter
+    document.querySelector("#count span").innerHTML = items.length;
+
+    //updating remaining item counter
+    leftTasks()
 }
 
 
@@ -58,8 +72,8 @@ function completed(id)
             return;
          }
     });
+    leftTasks();
 }
-
 
 function deleteItem(id)
 {
@@ -70,3 +84,11 @@ function deleteItem(id)
     fillList();    
 }
 
+function leftTasks()
+{
+    //updating remaining item counter
+    document.querySelector("#count-left span").innerHTML = items.reduce((prev,val)=>{
+        if(!val.checked) return prev + 1;
+        else return prev;
+    },0);
+}
