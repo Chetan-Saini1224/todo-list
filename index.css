@@ -41,7 +41,8 @@ body{
 position: absolute;
 bottom: 1%;
 width: 95%;
-background-color: #fc92c4;
+background-color: #e6fd93;
+text-align: center;
 opacity: 0.9;    
 }
 
@@ -63,13 +64,11 @@ opacity: 0.9;
     border-radius: 5px;
     font-size: 17px;
     padding: 1%;
-    border: 2px solid #fc92c4;
-    background-color:#fc92c4;
+    border: 2px solid #e6fd93;
+    background-color: #e6fd93;
     outline: none;
-    color: rgb(159, 251, 205);
-
 }
-#todo-input input[type="button"]
+#todo-input input[value="ADD"]
 {
     width: 20%;
     border-radius: 2%; 
@@ -77,11 +76,17 @@ opacity: 0.9;
     padding: 1%;
     font-size: 17px;
     outline: none;
-    border: 2px solid #fc92c4;
+    color: #fc92c4; 
+    background-color: #e6fd93;
+    border: 1px solid #e6fd93;
+
+}
+#todo-input input[value="ADD"]:hover
+{
+    border: 1px solid #fc92c4;
     background-color: #fc92c4;
     color: rgb(159, 251, 205)
 }
-
 
 .todo_item
 {
@@ -145,9 +150,4 @@ when todo item is checked */
     color: #fc92c4;
     border: 2px solid #fc92c4;
     border-radius: 5px;
-}
-
-.fa-trash:hover
-{
- color: #fc92c4;
 }
